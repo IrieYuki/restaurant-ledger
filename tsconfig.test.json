@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": ".test-dist",
+    "rootDir": ".",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "ES2022",
+    "incremental": false,
+    "plugins": [],
+    "types": ["node"]
+  },
+  "include": [
+    "src/lib/ledger.ts",
+    "src/lib/ledger-history.ts",
+    "src/lib/ledger-report.ts",
+    "src/lib/ledger-csv.ts",
+    "src/lib/ledger-backup.ts",
+    "tests/**/*.ts"
+  ],
+  "exclude": ["node_modules", ".next", ".test-dist"]
+}

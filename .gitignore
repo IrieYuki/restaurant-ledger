@@ -12,16 +12,40 @@
 
 # testing
 /coverage
+/.test-dist/
 
-# next.js
+# next.js and framework caches
 /.next/
 /out/
+/.turbo/
 
 # production
 /build
 
-# misc
+# cloudflare local state and secrets
+/.wrangler/
+/.open-next/
+.dev.vars
+
+# local ledger data, exports and backups
+*.sqlite
+*.sqlite3
+*.db
+餐厅账本_*.csv
+餐厅账本_*.json
+restaurant-ledger-backup*.json
+
+# logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# operating system and editor clutter
 .DS_Store
+Thumbs.db
+Desktop.ini
+.Spotlight-V100/
+.Trashes/
 *.pem
 
 # debug
@@ -32,6 +56,8 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+!.env.*.example
 
 # vercel
 .vercel
